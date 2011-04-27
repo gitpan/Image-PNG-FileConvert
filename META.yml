@@ -1,16 +1,17 @@
 --- #YAML:1.0
 name:               Image-PNG-FileConvert
-version:            0.01
+version:            0.02
 abstract:           ~
-author:  []
-license:            unknown
+author:
+    - Ben Bullock <bkb@cpan.org>
+license:            perl
 distribution_type:  module
 configure_requires:
     ExtUtils::MakeMaker:  0
 build_requires:
     ExtUtils::MakeMaker:  0
 requires:
-    Image::PNG:  0.01
+    Image::PNG:  0.03
 no_index:
     directory:
         - t

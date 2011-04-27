@@ -8,12 +8,14 @@ WriteMakefile (
     VERSION_FROM => 'lib/Image/PNG/FileConvert.pm',
     # Modules which this depends on
     PREREQ_PM => {
-        'Image::PNG' => 0.01,
+        'Image::PNG' => 0.03,
     },
     # Executable files (scripts) to be installed
     EXE_FILES => [
         'script/file2png',
         'script/png2file',
     ],
+    LICENSE => 'perl',
+    AUTHOR => 'Ben Bullock <bkb@cpan.org>',
 );
 

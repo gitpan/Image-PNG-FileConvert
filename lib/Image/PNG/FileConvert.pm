@@ -4,7 +4,7 @@ require Exporter;
 @EXPORT_OK = qw/file2png png2file/;
 use warnings;
 use strict;
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 use Carp;
 use Image::PNG::Libpng ':all';
 use Image::PNG::Const ':all';
@@ -57,10 +57,12 @@ sub file2png
     if ($options->{verbose}) {
         printf "Read 0x%X rows.\n", $i;
     }
+    # The number of bytes in the last row.
     my $end_bytes = $bytes % $options->{row_length};
-    # Fill the final row up with useless bytes.
+    # Fill the final row up with useless bytes so that we are not
+    # reading from unallocated memory.
     if ($end_bytes > 0) {
-        $rows[-1] .= "X" x $end_bytes;
+        $rows[-1] .= "X" x ($options->{row_length} - $end_bytes);
     }
     my $png = create_write_struct ();
     my %IHDR = (
@@ -112,16 +114,16 @@ sub png2file
     my $png = create_read_struct ();
     init_io ($png, $input);
     if ($options->{verbose}) {
-        print "ok\n";
+        print "Reading file\n";
     }
     read_png ($png);
     my $IHDR = get_IHDR ($png);
     if ($options->{verbose}) {
-        print "ok\n";
+        print "Getting rows\n";
     }
     my $rows = get_rows ($png);
     if ($options->{verbose}) {
-        print "ok\n";
+        print "Finished reading file\n";
     }
     close $input;
     my $text_segments = get_text ($png);
@@ -196,11 +198,13 @@ C<myfile.txt> again. If you want to specify a different name,
 
 and the file will be unwrapped into C<not-the-same-name.txt>.
 
-If you want your PNG to have a different number of rows than the
-default, there is another option, C<row_length>, specified in the same
-way:
+If you want your PNG to have a different width than the default, there
+is another option, C<row_length>, specified in the same way:
 
     file2png ('myfile.txt', 'myfile.png', { row_length => 0x100 });
+
+The number you specify for C<row_length> will be the width of the
+image in pixels.
 
 =head2 png2file
 
@@ -244,4 +248,10 @@ Ben Bullock, <bkb@cpan.org>
 You can use, modify and distribute this software under the Perl
 Artistic Licence or the GNU General Public Licence.
 
+=head1 UTILITIES
+
+The distribution also includes two utility scripts, file2png and
+png2file, which convert a file to a PNG image and back again.
+
 =cut
+
