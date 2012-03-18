@@ -8,7 +8,7 @@ WriteMakefile (
     VERSION_FROM => 'lib/Image/PNG/FileConvert.pm',
     # Modules which this depends on
     PREREQ_PM => {
-        'Image::PNG' => 0.03,
+        'Image::PNG' => 0.09,
     },
     # Executable files (scripts) to be installed
     EXE_FILES => [

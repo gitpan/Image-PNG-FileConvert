@@ -4,4 +4,5 @@ MANIFEST			This list of files
 script/file2png
 script/png2file
 t/Image-PNG-FileConvert.t
-META.yml                                 Module meta-data (added by MakeMaker)
+META.yml                                 Module YAML meta-data (added by MakeMaker)
+META.json                                Module JSON meta-data (added by MakeMaker)
