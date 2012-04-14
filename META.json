@@ -37,5 +37,13 @@
       }
    },
    "release_status" : "stable",
-   "version" : "0.05"
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/benkasminbullock/Image-PNG-FileConvert/issues"
+      },
+      "repository" : {
+         "url" : "https://github.com/benkasminbullock/Image-PNG-FileConvert"
+      }
+   },
+   "version" : "0.06"
 }

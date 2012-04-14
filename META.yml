@@ -19,4 +19,7 @@ no_index:
     - inc
 requires:
   Image::PNG: 0.10
-version: 0.05
+resources:
+  bugtracker: https://github.com/benkasminbullock/Image-PNG-FileConvert/issues
+  repository: https://github.com/benkasminbullock/Image-PNG-FileConvert
+version: 0.06
