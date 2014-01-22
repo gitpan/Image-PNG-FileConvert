@@ -4,7 +4,7 @@ require Exporter;
 @EXPORT_OK = qw/file2png png2file/;
 use warnings;
 use strict;
-our $VERSION = 0.06;
+our $VERSION = 0.07;
 use Carp;
 use Image::PNG::Libpng ':all';
 use Image::PNG::Const ':all';
@@ -241,12 +241,6 @@ L</png2file>.
 
 =back
 
-=head1 WHY?
-
-This module is for people who want to sneakily use free photo/image
-sharing websites, free mail services, or other such dumbasseries to
-store and retrieve data files.
-
 =head1 AUTHOR
 
 Ben Bullock, <bkb@cpan.org>
@@ -255,8 +249,6 @@ Ben Bullock, <bkb@cpan.org>
 
 You can use, modify and distribute this software under the Perl
 Artistic Licence or the GNU General Public Licence.
-
-=head1 DIAGNOSTICS
 
 =head1 SEE ALSO
 

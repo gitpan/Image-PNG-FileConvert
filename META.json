@@ -4,7 +4,7 @@
       "Ben Bullock <bkb@cpan.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "ExtUtils::MakeMaker version 6.62, CPAN::Meta::Converter version 2.120630",
+   "generated_by" : "ExtUtils::MakeMaker version 6.86, CPAN::Meta::Converter version 2.133380",
    "license" : [
       "perl_5"
    ],
@@ -32,7 +32,8 @@
       },
       "runtime" : {
          "requires" : {
-            "Image::PNG" : "0.10"
+            "Image::PNG::Libpng" : "0.27",
+            "perl" : "5.008001"
          }
       }
    },
@@ -45,5 +46,5 @@
          "url" : "https://github.com/benkasminbullock/Image-PNG-FileConvert"
       }
    },
-   "version" : "0.06"
+   "version" : "0.07"
 }
