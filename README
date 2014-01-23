@@ -12,7 +12,7 @@
                                                      
 
 
-This is the README for Image::PNG::FileConvert version 0.07.
+This is the README for Image::PNG::FileConvert version 0.08.
 
 Image::PNG::FileConvert is a "module" for the Perl computer programming
 language, a library of computer code to install on a computer.  This document
@@ -64,11 +64,11 @@ If you have the App::cpanminus installer, you may prefer
 
     cpanm Image::PNG::FileConvert
 
-To install the module from the source file, Image-PNG-FileConvert-0.07.tar.gz,
+To install the module from the source file, Image-PNG-FileConvert-0.08.tar.gz,
 follow this sequence of commands:
 
-    tar xfz Image-PNG-FileConvert-0.07.tar.gz
-    cd Image-PNG-FileConvert-0.07
+    tar xfz Image-PNG-FileConvert-0.08.tar.gz
+    cd Image-PNG-FileConvert-0.08
     perl Makefile.PL
     make
     make install
@@ -93,6 +93,6 @@ public repository on github at
 
 -----------------------------------------------------------------------------
 
-This README was written on Wed Jan 22 09:29:05 2014.
+This README was written on Thu Jan 23 11:24:28 2014.
 
 -----------------------------------------------------------------------------

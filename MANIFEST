@@ -1,4 +1,3 @@
-build.pl
 Changes
 lib/Image/PNG/FileConvert.pm
 Makefile.PL
@@ -7,7 +6,6 @@ MANIFEST.SKIP
 README
 script/file2png
 script/png2file
-t/.gitignore
 t/Image-PNG-FileConvert.t
 t/test.png
 META.yml                                 Module YAML meta-data (added by MakeMaker)

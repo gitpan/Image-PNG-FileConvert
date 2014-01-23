@@ -5,6 +5,8 @@
 ^Makefile\.(old|bak)$
 ^\.git/.*$
 ^\.gitignore$
+^t/\.gitignore$
 ^dists/.*$
 ^MYMETA\.(json|yml)$
 ^t/back$
+^build\.pl$
